@@ -1,0 +1,19 @@
+{
+    "name": "davidnsai/numlock",
+    "description": "This a CodeIgniter Library for phone number validation.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Davidnsai\\Numlock\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "davidnsai",
+            "email": "david@davidnsai.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
