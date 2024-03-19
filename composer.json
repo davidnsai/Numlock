@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Davidnsai\\Numlock\\": "src/"
+            "Numlock\\": "src/"
         }
     },
     "authors": [
@@ -14,8 +14,8 @@
             "email": "david@davidnsai.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "giggsey/libphonenumber-for-php": "^8.0@dev"
+        "giggsey/libphonenumber-for-php": "^8.0"
     }
 }
