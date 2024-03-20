@@ -7,15 +7,15 @@ use \libphonenumber\PhoneNumberUtil;
 class ValidatePhone
 {
     /**
-     * @param string $str
+     * @param string $phoneNumber
      * @return bool
      * This function checks if the given string is a valid phone number. 
      * The phone number should be in the format +260xxxxxxxxx. 
      * Returns true if the phone number is valid and false if it is not.
      */
-    public function is_valid_phone(string $phonenumber): bool
+    public function is_valid_phone(string $phoneNumber): bool
     {
-        $swissNumberStr = $phonenumber;
+        $swissNumberStr = $phoneNumber;
         $phoneUtil = PhoneNumberUtil::getInstance();
         
         try {
@@ -27,7 +27,7 @@ class ValidatePhone
     }
 
     /** 
-     * @param string $str
+     * @param string $phoneNumber
      * @param string $country
      * @return bool
      * This function checks if the given string is a valid phone number for a specific country.
@@ -35,9 +35,9 @@ class ValidatePhone
      * The phone number should be in the format +country_codexxxxxxxxx.
      * Returns true if the phone number is valid and false if it is not.
      */
-    public function valid_phone_country(string $phonenumber, string $country): bool
+    public function valid_phone_country(string $phoneNumber, string $country): bool
     {
-        $swissNumberStr = $phonenumber;
+        $swissNumberStr = $phoneNumber;
         $phoneUtil = PhoneNumberUtil::getInstance();
         
         try {
