@@ -17,7 +17,13 @@ class ValidatePhone
     {
         $swissNumberStr = $str;
         $phoneUtil = PhoneNumberUtil::getInstance();
-        return (bool) $phoneUtil->isValidNumber($phoneUtil->parse($swissNumberStr));
+        
+        try {
+            $swissNumberProto = $phoneUtil->parse($swissNumberStr);
+            return $phoneUtil->isValidNumber($swissNumberProto);
+        } catch (\libphonenumber\NumberParseException $e) {
+            return false;
+        }
     }
 
     /** 
@@ -33,7 +39,13 @@ class ValidatePhone
     {
         $swissNumberStr = $str;
         $phoneUtil = PhoneNumberUtil::getInstance();
-        return (bool) $phoneUtil->isValidNumber($phoneUtil->parse($swissNumberStr, $country));
+        
+        try {
+            $swissNumberProto = $phoneUtil->parse($swissNumberStr, $country);
+            return $phoneUtil->isValidNumberForRegion($swissNumberProto, $country);
+        } catch (\libphonenumber\NumberParseException $e) {
+            return false;
+        }
     }
 
 }
