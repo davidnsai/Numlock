@@ -4,7 +4,7 @@ namespace Numlock;
 
 use \libphonenumber\PhoneNumberUtil;
 
-class Numlock
+class ValidatePhone
 {
     /**
      * @param string $str
