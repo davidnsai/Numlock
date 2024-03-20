@@ -13,9 +13,9 @@ class ValidatePhone
      * The phone number should be in the format +260xxxxxxxxx. 
      * Returns true if the phone number is valid and false if it is not.
      */
-    public function is_valid_phone(string $str): bool
+    public function is_valid_phone(string $phonenumber): bool
     {
-        $swissNumberStr = $str;
+        $swissNumberStr = $phonenumber;
         $phoneUtil = PhoneNumberUtil::getInstance();
         
         try {
@@ -35,9 +35,9 @@ class ValidatePhone
      * The phone number should be in the format +country_codexxxxxxxxx.
      * Returns true if the phone number is valid and false if it is not.
      */
-    public function valid_phone_country(string $str, string $country): bool
+    public function valid_phone_country(string $phonenumber, string $country): bool
     {
-        $swissNumberStr = $str;
+        $swissNumberStr = $phonenumber;
         $phoneUtil = PhoneNumberUtil::getInstance();
         
         try {
